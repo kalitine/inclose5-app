@@ -148,6 +148,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "inclose5-app"
+    }
+  },
+  "defaultProject": "inclose5-app",
+  "cli": {
+    "analytics": "fe215eb6-bd3e-475f-8105-113d6664b21f"
+  }
 }
