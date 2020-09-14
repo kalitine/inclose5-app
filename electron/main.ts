@@ -6,7 +6,11 @@ let win: BrowserWindow | null
 let counter = 0
 
 function createWindow(): void {
-  win = new BrowserWindow({ width: 800, height: 600 })
+  win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: { nodeIntegration: true },
+  })
 
   win.loadURL(
     url.format({
