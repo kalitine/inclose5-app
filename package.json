@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint --typeCheck --fix && prettier --check --write './**/*.{html,json,css,scss,md,js,ts}'",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron": "ng build --base-href ./ && tsc --p electron && electron electron/dist/main.js"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "@angular/platform-browser": "~10.1.1",
     "@angular/platform-browser-dynamic": "~10.1.1",
     "@angular/router": "~10.1.1",
+    "electron": "^10.1.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

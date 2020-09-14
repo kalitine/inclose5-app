@@ -1,4 +1,6 @@
 import { Component } from '@angular/core'
+import { BehaviorSubject, Observable } from 'rxjs'
+import { FcaService } from './services/fca.service'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core'
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'inclose5-app'
+  $message: Observable<string>
+
+  constructor(private fca: FcaService) {
+    this.$message = fca.$message.asObservable()
+  }
 }
